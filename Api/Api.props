@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ImportGroup Label="PropertySheets" />
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <CustomBuildAfterTargets>Midl</CustomBuildAfterTargets>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);$(ProjectDir)Projection</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>windowsapp.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalOptions>%(AdditionalOptions)</AdditionalOptions>
+      <DelayLoadDLLs>%(DelayLoadDLLs)</DelayLoadDLLs>
+    </Link>
+    <Midl>
+      <AdditionalMetadataDirectories>$(WindowsSDK_MetadataFoundationPath);%(AdditionalMetadataDirectories)</AdditionalMetadataDirectories>
+      <EnableWindowsRuntime>true</EnableWindowsRuntime>
+      <OutputDirectory>$(IntermediateOutputPath)</OutputDirectory>
+      <MetadataFileName>$(TargetDir)\$(TargetName).winmd</MetadataFileName>
+    </Midl>
+    <CustomBuildStep>
+      <Message>C++/WinRT compiler</Message>
+      <Command>cppwinrt.exe -in "$(TargetDir)$(TargetName).winmd" -comp "$(ProjectDir)Component" -out "$(ProjectDir)Projection" -ref sdk</Command>
+      <Inputs>$(TargetDir)$(TargetName).winmd</Inputs>
+      <Outputs>$(ProjectDir)Projection\module.g.cpp</Outputs>
+    </CustomBuildStep>
+  </ItemDefinitionGroup>
+  <ItemGroup />
+</Project>

@@ -1,0 +1,19 @@
+﻿import "Windows.Foundation.idl";
+
+namespace Api
+{
+	runtimeclass MyClass;
+
+	[version(1.0), uuid(91B91DAE-3353-42E8-B91A-0BDD9743FFF3), exclusiveto(MyClass)]
+	interface IMyClass : IInspectable
+	{
+		[propget] HRESULT Text([out, retval] HSTRING* value);
+	};
+
+	[version(1.0), activatable(1.0)]
+	runtimeclass MyClass
+	{
+		[default] interface IMyClass;
+		interface Windows.Foundation.IStringable;
+	}
+}
