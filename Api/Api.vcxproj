@@ -107,8 +107,6 @@
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableUAC>false</EnableUAC>
-      <ModuleDefinitionFile>
-      </ModuleDefinitionFile>
     </Link>
     <Midl />
     <CustomBuildStep />
@@ -126,8 +124,6 @@
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableUAC>false</EnableUAC>
-      <ModuleDefinitionFile>
-      </ModuleDefinitionFile>
     </Link>
     <Midl />
     <CustomBuildStep />
@@ -149,8 +145,6 @@
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableUAC>false</EnableUAC>
-      <ModuleDefinitionFile>
-      </ModuleDefinitionFile>
     </Link>
     <Midl />
     <CustomBuildStep />
@@ -172,8 +166,6 @@
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableUAC>false</EnableUAC>
-      <ModuleDefinitionFile>
-      </ModuleDefinitionFile>
     </Link>
     <Midl />
     <CustomBuildStep />
