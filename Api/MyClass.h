@@ -2,6 +2,8 @@
 
 #include "Projection\MyClass.g.h"
 
+// NOTE: See Author APIs with C++/WinRT https://docs.microsoft.com/en-us/windows/uwp/cpp-and-winrt-apis/author-apis
+
 namespace winrt::Api::implementation
 {
     struct MyClass : MyClassT<MyClass>
