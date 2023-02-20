@@ -12,8 +12,8 @@ The `Api` project is a DLL library project which includes a [WinRT IDL definitio
 
 As of now the template is minimalistic and is used with:
 
-- Visual Studio 2019 (Version 16.4.5)
-- Windows 10 SDK 10.0.18362
+- Visual Studio 2022
+- Windows 10 SDK 10.0.22621
 - C++/WinRT shipped with Windows 10 SDK
 - x64 platform
 
