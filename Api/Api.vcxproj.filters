@@ -40,7 +40,6 @@
     <None Include="module.def">
       <Filter>Source Files</Filter>
     </None>
-    <None Include="Api.props" />
   </ItemGroup>
   <ItemGroup>
     <Midl Include="Api.idl">

@@ -80,7 +80,7 @@
     </Midl>
     <CustomBuildStep>
       <Message>C++/WinRT compiler</Message>
-      <Command>cppwinrt.exe -in "$(TargetDir)$(TargetName).winmd" -comp "$(ProjectDir)Component" -out "$(ProjectDir)Projection" -ref sdk</Command>
+      <Command>cppwinrt.exe -in "$(TargetDir)$(TargetName).winmd" -reference "$(WindowsSDK_UnionMetadataPath)\Windows.winmd" -comp "$(ProjectDir)Component" -out "$(ProjectDir)Projection"</Command>
       <Inputs>$(TargetDir)$(TargetName).winmd</Inputs>
       <Outputs>$(ProjectDir)Projection\module.g.cpp</Outputs>
     </CustomBuildStep>
@@ -97,7 +97,6 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Api.props" />
     <None Include="module.def" />
   </ItemGroup>
   <ItemGroup>
